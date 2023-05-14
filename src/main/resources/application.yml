@@ -1,0 +1,22 @@
+server:
+  port: 10000
+
+spring:
+  datasource:
+    driverClassName: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: am
+    password: pass
+  jpa:
+    databasePlatform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddlAuto: validate
+#      ddlAuto: create
+#      ddlAuto: create-drop
+#      ddlAuto: update
+
+# Disable p6spy
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: true
